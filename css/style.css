@@ -13,8 +13,33 @@ Branco: #e8f1f9 */
   scroll-behavior: smooth;
 }
 
+header{
+  position: fixed;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: center;
+  background-image: url(https://capsule-render.vercel.app/api?type=waving&color=353535&height=120&section=header);
+}
+
 body {
   background-color: #161716;
+}
+
+#backtotop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #f6a700;
+  text-decoration: none;
+  border-radius: 100%;
+}
+
+#backtotop img{
+  height: 50px;
 }
 
 #navbar {
@@ -22,7 +47,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  background-color: #161716;
 }
 
 #logo{
@@ -74,6 +98,7 @@ body {
 }
 
 #informations {
+  padding-top: 50px;
   background-color: #161716;
   height: auto;
   align-content: center;
@@ -195,7 +220,7 @@ body {
   height: auto;
   max-width: 80%;
   background-color: #1a1b1a;
-  margin: 0 auto;
+  margin: 50px auto;
   border-radius: 7px;
   display: flex;
   align-items: center;
@@ -251,3 +276,185 @@ body {
 #job-logo{
   width: 10%;
 }
+
+#contact-section{
+  height: auto;
+  max-width: 80%;
+  background-color: #1a1b1a;
+  margin: 100px auto 50px auto;
+  border-radius: 7px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+#contact-me-text h1{
+  color:#f6a700;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+#contact-me-text h3{
+  color:#fed353;
+  width: 50%;
+}
+
+#contact-img-btn{
+  display: flex;
+}
+
+#contact-me-buttons{
+  width: 60%;
+  align-content: center;
+}
+
+.icons-contact-section{
+  display: flex;
+  width: 400px;
+  height: 75px;
+  background-color: #161716;
+  border-radius: 7px;
+  margin: 25px auto;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icons-contact-section:hover{
+  transition: 0.4s;
+  background-color: #111111;
+}
+
+.icons-contact-section span{
+  margin-right: 5px;
+}
+
+#contact-me-buttons a{
+  text-decoration: none;
+  color: #f6a700;
+}
+
+#contact-me-buttons h1{
+  color: #f6a700;
+}
+
+#contact-me-buttons i{
+  font-size: 35px;
+  margin: 0 10px 0 40px;
+}
+
+#contact-image img{
+  width: 450px;
+}
+
+#about{
+  display: flex;
+  height: auto;
+  width: 80%;
+  margin: 100px auto;
+  background-color: #1a1b1a;
+  border-radius: 7px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+#about-img img{
+  height: 450px;
+}
+
+#about-text{
+  width: 50%;
+  justify-items: center;
+  align-content: center;
+  
+}
+
+#about h1{
+  font-size: 40px;
+  color: #f6a700;
+  margin-bottom: 1rem;
+}
+
+.about-text-items{
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+  width: 80%;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 1rem;
+  background-color: #161716;
+  border-radius: 7px;
+}
+
+.about-text-items img{
+  height: 45px;
+}
+
+.about-text-items i{
+  font-size: 35px;
+  padding: 3px 1px 3px 3px;
+  color: #f6a700;
+}
+
+.about-text-items .smaller-icons{
+  font-size: 30px;
+  padding: 3px 0 3px 3px;
+}
+
+.about-text-items h3{
+  color: #fed353;
+  font-size: 23px;
+  margin-left: 15px;
+}
+
+#about-text h2{
+  color: #fed353;
+}
+
+
+
+footer{
+  height: 120px;
+  background-image: url(https://capsule-render.vercel.app/api?type=waving&color=353535&height=120&section=footer);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  color: #e8f1f9;
+  width: 100%;
+  margin: 0 auto;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+#logo-footer{
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+#logo-footer #pFooter{
+  margin-left: 5rem;
+}
+
+#logo-footer a{
+  text-decoration: none;
+  color: #e8f1f9;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#logo-footer img{
+  height: 20px;
+}
+
+#logo-footer a:hover{
+  transition: 0.1s;
+  color:#f6a700;
+}
+
+#logo-footer a span{
+  list-style: none;
+  color: #f6a700;
+}
+
+
