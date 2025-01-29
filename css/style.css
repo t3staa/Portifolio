@@ -20,6 +20,7 @@ header{
   background-size: 100%;
   background-position-y: center;
   background-image: url(https://capsule-render.vercel.app/api?type=waving&color=353535&height=120&section=header);
+  z-index: 1;
 }
 
 body {
@@ -169,11 +170,15 @@ body {
 
 #projects-container {
   background-color: #161716;
-  padding: 50px 0;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#project {
-  background-color:#1a1b1a;
+#wrapper{
+  position: relative;
+  background-color: #1a1b1a;
   height: auto;
   max-width: 80%;
   margin: 0px auto;
@@ -181,44 +186,98 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-top: 30px;
+  padding: 30px 0;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.20);
 }
 
-#project .projects-items{
+#wrapper i{
+  height: 50px;
+  width: 50px;
+  background: #f6a700;
+  color: #e8f1f9;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  /* transform: translateY(-50%); */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#left{
+  position: absolute;
+  top: 175px;
+}
+
+#right{
+  position: absolute;
+  top: 175px;
+}
+
+#wrapper i:hover{
+  transition: 0.2s;
+  background: #161716;
+}
+
+#wrapper i:first-child{
+  left: -15px;
+}
+
+#wrapper i:last-child{
+  right: -15px;
+}
+
+#wrapper #carousel{
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  justify-items: center;
+  grid-auto-columns: calc((100% / 3));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+#carousel::-webkit-scrollbar{
+  display: none;
+}
+
+#carousel #card{
+  scroll-snap-align: center;
   background-color: #161716;
-  height: 500px;
+  height: auto;
   width: 320px;
-  margin-bottom: 30px;
   justify-items: center;
   box-sizing: border-box;
   padding: 20px;
   border-radius: 7px;
+  list-style: none;
+  cursor: pointer;
 }
 
-#project .projects-items img{
+#carousel #card img{
   height: 280px;
 }
 
-#project .projects-items h3 {
+#carousel #card h3 {
   padding-top: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 7px;
 }
 
-#project .projects-items h3 a{
+#carousel #card h3 a{
   text-decoration: none;
   color: #fed353;
 }
 
-#project .projects-items a:hover{
+#carousel #card a:hover{
   transition: 0.1s;
   color: #f6a700;
 }
 
-#project .projects-items p{
+#carousel #card p{
   color: #e8f1f9;
   overflow: hidden;
-  height: 70px;
+  height: 50px;
   box-sizing: border-box;
   padding: 2px;
   border: 2px solid #1a1b1a;
@@ -226,7 +285,7 @@ body {
   width: 100%;
 }
 
-#project .projects-items #arrowBtn{
+#carousel #card #arrowBtn{
   color: #f6a700;
   background-color: #1a1b1a;
   font-size: 30px;
@@ -239,10 +298,10 @@ body {
   width: 50px;
   border: none;
   transform: rotate(-45deg);
-  margin: 5px 80% 5px 0px;
+  margin: 15px 80% 0px 0px;
 }
 
-#project .projects-items #arrowBtn:hover{
+#carousel #card #arrowBtn:hover{
   background-color: #111111;
   transition: 0.2s;
 }
@@ -250,7 +309,7 @@ body {
 #exp {
   height: auto;
   max-width: 80%;
-  background-color: #1a1b1a;
+  background: linear-gradient(to left top, #fed353, #f6a700);
   margin: 50px auto;
   border-radius: 7px;
   display: flex;
@@ -384,7 +443,7 @@ body {
   height: auto;
   width: 80%;
   margin: 100px auto;
-  background-color: #1a1b1a;
+  background: linear-gradient(to left top, #fed353, #f6a700);
   border-radius: 7px;
   padding: 2rem;
   box-sizing: border-box;
@@ -404,7 +463,7 @@ body {
 
 #about h1{
   font-size: 40px;
-  color: #f6a700;
+  color: #111111;
   margin-bottom: 1rem;
 }
 
@@ -442,10 +501,8 @@ body {
 }
 
 #about-text h2{
-  color: #fed353;
+  color: #111111;
 }
-
-
 
 footer{
   height: 120px;
@@ -491,4 +548,16 @@ footer{
   color: #f6a700;
 }
 
+/* Responsividade apenas do carrossel por enquanto */
+@media screen and (max-width: 1200px){
+  #wrapper #carousel{
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px){
+  #wrapper #carousel{
+    grid-auto-columns: 100%;
+  }
+}
 
